@@ -1,0 +1,450 @@
+:root {
+   --secondary-black: #02020a;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+#root {
+   background-color: rgba(229, 229, 229, 0.5);
+}
+
+body {
+   font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+   color: black;
+   text-decoration: none;
+}
+
+a:hover {
+   color: inherit;
+}
+
+nav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--secondary-black);
+   color: white;
+   width: 100%;
+   height: 4rem;
+   filter: drop-shadow(1px 1px 4px var(--secondary-black));
+   position: sticky;
+   top: 0;
+   z-index: 6;
+}
+
+nav span {
+   font-size: 1.7rem;
+   font-weight: lighter;
+}
+
+.custom-container {
+   padding: 1.4rem 0;
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   background-color: rgba(229, 229, 229, 0.5);
+}
+
+.card-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+
+#searchBar {
+   width: 80%;
+   padding: 10px;
+   font-size: 1rem;
+   margin-bottom: 1rem;
+}
+
+hr {
+   margin-bottom: 1rem;
+   width: 80%;
+}
+
+.card-container a {
+   width: 80%;
+   margin-bottom: 1.3rem;
+}
+
+.card {
+   height: 4rem;
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: 100%;
+   overflow: auto;
+}
+
+.card img {
+   margin-left: 0.6rem;
+   width: 40px;
+   height: 40px;
+}
+
+.price-row {
+   width: 90%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.coin-name {
+   width: 70%;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+.info {
+   width: 100%;
+   margin-left: 1rem;
+}
+
+.percent-change {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.percent-change-arrow-down {
+   width: 0;
+   height: 0;
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+   border-top: 6px solid #f00;
+   margin-right: 2px;
+}
+
+.percent-change-arrow-up {
+   width: 0;
+   height: 0;
+   border-left: 4px solid transparent;
+   border-right: 4px solid transparent;
+   border-bottom: 6px solid green;
+   margin-right: 2px;
+}
+
+/* Footer Nav Starts Here */
+.footer-div {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   background-color: var(--secondary-black);
+   height: 3rem;
+   width: 100%;
+   border-radius: 50px 50px 0 0;
+   color: white;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.footer-div a {
+   color: white;
+}
+
+.footer-div svg {
+   width: 2rem;
+   height: 2rem;
+}
+
+.footer-div svg:hover {
+   cursor: pointer;
+   opacity: 0.8;
+}
+
+/* Coin Page Starts Here */
+
+.coin-page-title {
+   display: flex;
+   height: 3rem;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 0.4rem 0 0.4rem;
+   box-shadow: 1px 1px 10px black;
+   margin-bottom: 0.5rem;
+}
+
+.coin-info-main-container {
+   height: 85vh;
+   overflow: auto;
+}
+
+.coin-info-container {
+   padding: 0.3rem 1rem;
+   display: flex;
+   align-items: center;
+}
+
+.img-div {
+   height: 50px;
+}
+
+.coin-info-container img {
+   height: 50px;
+   width: 50px;
+   border-radius: 10px;
+   padding: 5px;
+   border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.current-coin-price {
+   margin-left: 1.3rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.price-change {
+   display: flex;
+}
+
+.coin-percentage-change {
+   display: flex;
+   align-items: center;
+   margin-left: 1rem;
+}
+
+.center-div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.highest-lowest-div {
+   margin-top: 1rem;
+   font-size: 1rem;
+   font-family: sans-serif;
+}
+
+.not-found-div {
+   height: 60vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   opacity: 0.5;
+}
+
+.not-found-div-image {
+   height: 10rem;
+   width: 10rem;
+   background: url("./Images/404-error.png") no-repeat center center/cover;
+   margin-bottom: 1rem;
+}
+
+/* Graph Css */
+.unselectable {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.time-format-btns {
+   margin-top: 0.4rem;
+   margin-left: 1rem;
+}
+
+.time-format-btn {
+   background-color: transparent;
+   border: 1px solid gray;
+   border-radius: 5px;
+   font-size: 1rem;
+   padding: 5px;
+   outline: none;
+   margin-right: 0.4rem;
+   cursor: pointer;
+   transition: 0.6s ease;
+}
+
+.time-format-btn:focus {
+   background-color: black;
+   color: white;
+}
+
+/* Coin Info Starts Here */
+.coin-info-bottom {
+   background-color: rgba(229, 229, 229, 0.2);
+   margin-top: 1rem;
+   padding: 0.3rem;
+}
+
+.coin-data-container {
+   padding: 0.4rem;
+}
+
+.coin-data-container hr {
+   width: 100%;
+   opacity: 1;
+   margin-top: 5px;
+}
+
+.coin-data {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   opacity: 0.8;
+}
+
+.title-div {
+   display: flex;
+   align-items: center;
+}
+
+.coin-description-container {
+   margin-top: -1rem;
+   background-color: white;
+   padding: 0.4rem;
+}
+
+.coin-description-container h3 {
+   margin-bottom: 1rem;
+}
+
+/* Profile Page Starts Here */
+.profile-container {
+   height: 99vh;
+}
+
+.profile-info-container {
+   height: 40%;
+   background-color: #000000;
+   background-image: linear-gradient(-44deg, #000000 0%, #434343 143%);
+   position: relative;
+}
+
+.profile-info {
+   position: absolute;
+   bottom: -4rem;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.profile-img-div {
+   width: 4rem;
+   height: 4rem;
+   display: grid;
+   place-items: center;
+}
+
+.profile-img-div img {
+   border-radius: 50%;
+   height: 100%;
+   width: 100%;
+}
+
+.logout-btn {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   border-radius: 0;
+}
+
+/* Login Page Starts Here */
+.login-icon {
+   background: url("./Images/login-icon.png") no-repeat center center/cover;
+   width: 90px;
+   height: 90px;
+   margin-bottom: 1rem;
+}
+
+.login-container {
+   overflow: hidden;
+   height: 92vh;
+   width: 100vw;
+   background: rgb(29, 28, 31);
+   background: linear-gradient(
+      176deg,
+      rgba(29, 28, 31, 1) 0%,
+      rgba(82, 83, 85, 1) 252%
+   );
+   display: grid;
+   place-items: center;
+}
+
+.login-box {
+   width: 75%;
+   max-width: 17rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-bottom: 5rem;
+}
+
+.google-icon-div {
+   background-color: #fff;
+   padding: 5px;
+   border-radius: 50%;
+}
+
+.google-icon {
+   width: 1.5rem;
+   height: 1.5rem;
+   background: url("./Images/google-icon.png") no-repeat center center/cover;
+}
+
+.login-box button {
+   width: 80%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+/* Alert Css Starts Here */
+.alert-title {
+   margin-top: 1rem;
+   display: grid;
+   place-items: center;
+}
+
+.alert-card {
+   position: relative;
+   height: 5rem;
+   border-radius: 10px;
+   overflow: hidden;
+   margin-bottom: 1.5rem;
+}
+
+.alerts-info {
+   font-size: 1.4rem;
+   position: absolute;
+   left: 0.4rem;
+   top: 0.5rem;
+}
+
+.delete-card-btn {
+   position: absolute;
+   right: 0.4rem;
+   top: 0;
+   top: 0.5rem;
+}
+
+.alert-time {
+   position: absolute;
+   bottom: 0;
+   background-color: var(--secondary);
+   color: white;
+   width: 100%;
+   text-align: center;
+}
